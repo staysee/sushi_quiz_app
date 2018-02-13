@@ -10,6 +10,7 @@ function render() {
   displayQuestions()
   displayAnswerChoices()
   updateScore()
+  endGame()
 
 }
 
@@ -70,10 +71,24 @@ function nextQuestion(){
   render()
 }
 
+function endGame(){
+  if (number === 9){
+    $('#quiz-container').addClass("hidden");
+    $('#endgame-container').removeClass("hidden");
+    if (scoreCorrect >= 8){
+      $('.end-score').html("Congratulations sushi master! <br> You scored " + scoreCorrect + " out of 10 points!")
+    } else {
+      $('.end-score').html("Do you even eat sushi? <br> You only scored " + scoreCorrect + " out of 10 points...Try again...")
+    }
+  }
+}
+
 // EVENT HANDLERS
 
 $(document).ready(function(){
+  /*start game*/
   $('#welcome-container').on('click', '.js-play-button', startGame);
+  /*submit button*/
   $('#quiz-container').on('click', '.submit-button', function(event){
     event.preventDefault()
     if ($('input[type="radio"]:checked').length !== 0){
@@ -82,15 +97,14 @@ $(document).ready(function(){
       $('.next-button').removeClass("hidden");
     }
   })
+  /*next button*/
   $('#quiz-container').on('click', '.next-button', function(){
     nextQuestion()
     $('#game-message').html("");
     $('.next-button').addClass("hidden");
     $('.submit-button').removeClass("hidden");
   })
-
-
-
-
+  /*play again button*/
+  $('#endgame-container').on('click', '.js-play-button', newGame);
 })
 

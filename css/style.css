@@ -35,22 +35,21 @@ h1{
   display: none;
 }
 
+fieldset {
+  background-color: white
+}
 
 legend {
   font-weight: bold;
   text-align: center;
-}
-
-fieldset {
-  background-color: white
-}
-legend {
   border: 1px dotted blue;
   background-color: white;
 }
+
 #quiz-form {
   clear:both;
 }
+
 #quiz-form ul {
   padding-left: 0;
   columns: 2;
@@ -66,23 +65,32 @@ legend {
 button {
   background-color: white;
   position: relative;
-  text-align: center
+  text-align: center;
+  font-family: 'Gorditas', cursive;
 }
 
-.play-button{
+.play-button, .next-button, .submit-button {
   padding: 10px;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:5px;
   width: 100px;
 }
 
+
 .grow {
-  display: ;
   transition: all .2s ease-in-out;
 }
 
 .grow:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+
+.glow {
+  cursor: pointer;
+  background-color: #cdd7ea;
+  color: #318d9c;
 }
 
 .scores {
