@@ -5,14 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Style Sheet -->
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Gorditas:700" rel="stylesheet">
 </head>
 <body>
 
+<h1>Sushi Quiz</h1>
+<!-- Welcome Page -->
+  <div id="welcome-container" class="">
+      <div class="card welcome">
+        <h2>Welcome!</h2>
+        <p>Do you love sushi? Do you even know what you're eating? <br> Play the quiz and see if you really are a sushi expert!</p>
 
+        <button class="play-button grow js-play-button">Start</button>
+      </div>
+  </div>
+
+<!-- Play Game -->
+  <div id="quiz-container" class="hidden">
+    <div class="card">
+            <p class="question-number">question number</p>
+            <p class="scores"></p>
+      <form id="quiz-form" class="">
+        <fieldset>
+          <legend class="question-area">Question goes here?</legend>
+            <ul class="choices"></ul>
+            <div id="game-message"></div>
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="button" class="next-button grow hidden">Next</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+<!-- End Game -->
+  <div id="end-container" class="hidden">
+    play again
+  </div>
+
+
+<footer class="background"></footer>
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- JavaScript -->
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="js/questions.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

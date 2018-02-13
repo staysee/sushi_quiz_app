@@ -1,4 +1,4 @@
-var questionList = [
+var questions = [
 {
   question: 'What is known as Japanese horseradish?',
   choices: [ 'wasabi', 'nigori', 'mooli', 'ninjin' ],
