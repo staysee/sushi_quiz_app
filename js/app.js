@@ -77,8 +77,10 @@ function endGame(){
     $('#endgame-container').removeClass("hidden");
     if (scoreCorrect >= 8){
       $('.end-score').html("Congratulations sushi master! <br> You scored " + scoreCorrect + " out of 10 points!")
+      $('#end-image').attr('src', "img/sushi_party.png");
     } else {
       $('.end-score').html("Do you even eat sushi? <br> You only scored " + scoreCorrect + " out of 10 points...Try again...")
+      $('#end-image').attr('src', "img/beach_salmon.png");
     }
   }
 }
