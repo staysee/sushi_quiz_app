@@ -37,7 +37,7 @@ function displayAnswerChoices(){
   console.log(answerChoices)
   $('.choices').html('');
   for (var i = 0; i < answerChoices.length; i++){
-    $('.choices').append('<li class="grow"><input id="choice'+i+'" type="radio" name="options" value="'+i+'"><label for="choice'+i+'">'+answerChoices[i]+'</label></li>')
+    $('.choices').append('<li class="glow"><input id="choice'+i+'" type="radio" name="options" value="'+i+'"><label for="choice'+i+'">'+answerChoices[i]+'</label></li>')
   }
 }
 

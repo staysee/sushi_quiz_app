@@ -11,14 +11,18 @@ body {
 h1{
   font-family: 'Gorditas', cursive;
   font-size: 3.5em;
-  color: #F4A3F5;
+  color: #ca5acb;
   text-align: center;
+}
+
+.title {
+  min-width: 350px;
 }
 
 #welcome-container, #quiz-container {
   width: 100%;
   margin: 0 auto;
-  min-width: 200px;
+  min-width: 350px;
 }
 
 .card {
@@ -86,6 +90,7 @@ button {
   position: relative;
   text-align: center;
   font-family: 'Gorditas', cursive;
+  cursor: pointer;
 }
 
 .play-button, .next-button, .submit-button {
@@ -96,20 +101,11 @@ button {
   width: 100px;
 }
 
-.grow {
-  transition: all .2s ease-in-out;
-}
 
-.grow:hover {
+.glow:hover {
   /*transform: scale(1.2);*/
   cursor: pointer;
   background: pink;
-}
-
-.glow {
-  cursor: pointer;
-  background-color: #cdd7ea;
-  color: #318d9c;
 }
 
 .answer-choices:hover {
@@ -118,18 +114,18 @@ button {
 
 
 .correct-answer {
-  color: #24FE00;
+  background: #2CE132
 }
 
 .incorrect-answer {
-  color: #F4303E;
+  background: #E13E8B;
 }
 
 #end-image {
   width: 150px;
 }
 
-footer{
+/*footer{
   background-image: url('../img/sushi_friends.png');
   background-size: contain;
   background-repeat: repeat-x;
@@ -138,12 +134,12 @@ footer{
   height: 30%;
   position: absolute;
   z-index: -2;
-}
-/*.footer-image {
+}*/
+.footer-image {
   display: block;
   height: 200px;
   margin: 0 auto;
-}*/
+}
 
 
 @media only screen and (min-width: 600px){
@@ -152,17 +148,35 @@ footer{
     font-size: 16px;
   }
 
+  h1 {
+    font-size: 4em;
+  }
+
   h2 {
-    font-size: 1.7em;
+    font-size: 1.8em;
   }
 
   .card {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
   }
 
   .welcome p{
     padding-bottom: 10px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+  .play-button, .next-button, .submit-button {
+    padding: 15px;
+    width: 130px;
+  }
+
+  .footer-image {
+    display: block;
+    height: 250px;
+    margin: 20px auto 0px auto;
   }
 
 }
@@ -173,6 +187,7 @@ footer{
     font-size: 4.5em;
     margin: 30px;
   }
+
   h2 {
     font-size: 2.7em;
   }
