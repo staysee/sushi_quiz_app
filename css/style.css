@@ -103,12 +103,17 @@ button {
 .grow:hover {
   /*transform: scale(1.2);*/
   cursor: pointer;
+  background: pink;
 }
 
 .glow {
   cursor: pointer;
   background-color: #cdd7ea;
   color: #318d9c;
+}
+
+.answer-choices:hover {
+  background: grey;
 }
 
 
@@ -178,6 +183,10 @@ footer{
 
   .question-area{
     font-size: 25px;
+  }
+
+  label {
+    font-size: 20px;
   }
 
   #end-image {
