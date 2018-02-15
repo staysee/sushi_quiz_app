@@ -101,9 +101,7 @@ button {
   width: 100px;
 }
 
-
 .glow:hover {
-  /*transform: scale(1.2);*/
   cursor: pointer;
   background: pink;
 }
