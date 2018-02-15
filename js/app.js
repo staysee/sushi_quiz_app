@@ -80,17 +80,21 @@ function endGame(){
       $('#end-image').attr('src', "img/sushi_party.png");
     } else {
       $('.end-score').html("Do you even eat sushi? <br> You only scored " + scoreCorrect + " out of 10 points...Try again...")
-      $('#end-image').attr('src', "img/beach_salmon.png");
+      $('#end-image').attr('src', "img/beach_salmon_crop.png");
     }
   }
 }
 
 // EVENT HANDLERS
 
-$(document).ready(function(){
-  /*start game*/
+
+/*start game*/
+function handleStart(){
   $('#welcome-container').on('click', '.js-play-button', startGame);
-  /*submit button*/
+}
+
+/*submit button*/
+function watchSubmit(){
   $('#quiz-container').on('click', '.submit-button', function(event){
     event.preventDefault()
     if ($('input[type="radio"]:checked').length !== 0){
@@ -99,14 +103,25 @@ $(document).ready(function(){
       $('.next-button').removeClass("hidden");
     }
   })
-  /*next button*/
+}
+
+/*next button*/
+function watchNext(){
   $('#quiz-container').on('click', '.next-button', function(){
     nextQuestion()
     $('#game-message').html("");
     $('.next-button').addClass("hidden");
     $('.submit-button').removeClass("hidden");
   })
-  /*play again button*/
-  $('#endgame-container').on('click', '.js-play-button', newGame);
-})
+}
 
+/*play again button*/
+function handleNewGame(){
+  $('#endgame-container').on('click', '.js-play-button', newGame);
+}
+
+
+$(handleStart)
+$(watchSubmit)
+$(watchNext)
+$(handleNewGame)

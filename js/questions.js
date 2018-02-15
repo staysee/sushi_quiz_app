@@ -12,7 +12,7 @@ var questions = [
 {
   question: 'What does \"sushi\" actually mean?',
   choices: [ 'raw fish', 'sashimi', 'rice with vinegar', 'seaweed and rice' ],
-  correctAnswer: 3
+  correctAnswer: 2
 },
 {
   question: 'Which is not an egg?',

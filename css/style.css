@@ -120,6 +120,10 @@ button {
   color: #F4303E;
 }
 
+#end-image {
+  width: 150px;
+}
+
 footer{
   background-image: url('../img/sushi_friends.png');
   background-size: contain;
@@ -150,8 +154,6 @@ footer{
     padding-bottom: 10px;
   }
 
-  .scores, .question-number{
-  }
 }
 
 @media only screen and (min-width: 768px){
@@ -170,5 +172,9 @@ footer{
 
   .question-area{
     font-size: 25px;
+  }
+
+  #end-image {
+    width: 250px;
   }
 }
