@@ -43,7 +43,7 @@ function displayAnswerChoices(){
 
 function checkAnswer(){
   var userAnswer = $('input[type="radio"]:checked');
-  var correctAnswer = questions[number].correctAnswer
+  var correctAnswer = questions[number].correctAnswer;
   if (userAnswer.length == 0){
     console.log('none');
     alert('Choose an answer')
@@ -55,7 +55,7 @@ function checkAnswer(){
     scoreIncorrect++;
     console.log('wrong' + scoreIncorrect)
     userAnswer.closest('li').addClass("incorrect-answer");
-    //addClass("correct-answer") for the correct answer
+    $('#choice'+correctAnswer).closest('li').addClass("correct-answer");
   }
 }
 

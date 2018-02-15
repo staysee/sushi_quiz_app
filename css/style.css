@@ -128,11 +128,16 @@ footer{
   background-image: url('../img/sushi_friends.png');
   background-size: contain;
   background-repeat: repeat-x;
-  position: fixed;
   bottom: 0;
   width: 100%;
   height: 30%;
+  position: absolute;
 }
+/*.footer-image {
+  display: block;
+  height: 200px;
+  margin: 0 auto;
+}*/
 
 
 @media only screen and (min-width: 600px){
