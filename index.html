@@ -11,46 +11,52 @@
 </head>
 <body>
 
-  <div class="title">
-    <h1>Sushi Quiz</h1>
-  </div>
-<!-- Welcome Page -->
-  <div id="welcome-container" class="">
-      <div class="card welcome">
-        <h2>Welcome!</h2>
-        <p>Do you love sushi? Do you even know what you're eating? <br> Play the quiz and see if you really are a sushi expert!</p>
+  <header role="banner">
+    <div class="title">
+      <h1>Sushi Quiz</h1>
+    </div>
+  <header>
 
-        <button class="play-button grow js-play-button">Start</button>
+  <main role="main">
+  <!-- Welcome Page -->
+    <section id="welcome-container" class="" role="region">
+        <div class="card welcome">
+          <h2>Welcome!</h2>
+          <p>Do you love sushi? Do you even know what you're eating? <br> Play the quiz and see if you really are a sushi expert!</p>
+
+          <button class="play-button grow js-play-button">Start</button>
+        </div>
+    </section>
+
+  <!-- Play Game -->
+    <section id="quiz-container" class="hidden" role="region">
+      <div class="card">
+              <p class="question-number">question number</p>
+              <p class="scores"></p>
+        <form id="quiz-form" class="">
+          <fieldset>
+            <legend class="question-area">Question goes here?</legend>
+              <ul class="choices"></ul>
+              <div id="game-message"></div>
+              <button type="submit" class="submit-button">Submit</button>
+              <button type="button" class="next-button glow hidden">Next</button>
+          </fieldset>
+        </form>
       </div>
-  </div>
+    </section>
 
-<!-- Play Game -->
-  <div id="quiz-container" class="hidden">
-    <div class="card">
-            <p class="question-number">question number</p>
-            <p class="scores"></p>
-      <form id="quiz-form" class="">
-        <fieldset>
-          <legend class="question-area">Question goes here?</legend>
-            <ul class="choices"></ul>
-            <div id="game-message"></div>
-            <button type="submit" class="submit-button">Submit</button>
-            <button type="button" class="next-button glow hidden">Next</button>
-        </fieldset>
-      </form>
-    </div>
-  </div>
+      <!-- End Game -->
+    <section id="endgame-container" class="hidden" role="region">
+      <div class="card welcome">
+        <img id="end-image" src="">
+        <h3 class=end-score></h3>
+        <button class="play-button glow js-play-button">PLAY AGAIN</button>
+      </div>
+    </section>
 
-    <!-- End Game -->
-  <div id="endgame-container" class="hidden">
-    <div class="card welcome">
-      <img id="end-image" src="">
-      <h3 class=end-score></h3>
-      <button class="play-button glow js-play-button">PLAY AGAIN</button>
-    </div>
-  </div>
+  </main>
 
-<footer class="background">
+<footer class="background" role="contentinfo">
   <img class="footer-image" src="img/sushi_friends.png">
 </footer>
 
